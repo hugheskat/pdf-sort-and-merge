@@ -11,8 +11,8 @@ def listbox_widget(pdf_txt_file=True):
     Outputs a Tkinter Listbox widget displaying all the PDFs to merge.The user can sort the list into the correct order
     and save the list to a .txt file.
     Args:
-        pdf_txt_file: Whether the Listbox should be based on the list of of files in a .txt file or the order of the
-        files in the directory.
+        pdf_txt_file: Whether the items in the Listbox should be based on the list of of files in an existing text file 
+        in the directory or the files in the directory.
     """
 
     def file_list_to_list():
@@ -25,7 +25,6 @@ def listbox_widget(pdf_txt_file=True):
             data.append(f.strip())
 
         return data
-
 
     def quit():
         """Action performed when you click the button quit and save. It saves the entries in the Listbox to
@@ -104,7 +103,7 @@ def listbox_widget(pdf_txt_file=True):
     global root
     root = Tk()
     # add a PDF icon to the Tkinter window
-    root.iconbitmap(r'\\voyager\templates\Python\Kepler\python-3\icons\pdf.icon.ico')
+    root.iconbitmap(r'https://github.com/hugheskat/pdf-sort-and-merge/blob/master/pdf.icon.ico')
     root.title("PDFs list")
     label_ = Label(root,
               text="Sort the list of PDFs into the correct order. Click 'Quit and save' when done.")
